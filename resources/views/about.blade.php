@@ -1,4 +1,4 @@
-@extends('template.nav-footer')
+@extends('template.main')
 
 @section('isi')
     <h1>ini About</h1>

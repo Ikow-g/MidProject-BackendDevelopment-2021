@@ -1,1 +1,1 @@
-@extends('template.nav-footer')
+@extends('template.main')
