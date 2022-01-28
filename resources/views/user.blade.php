@@ -1,5 +1,5 @@
 @extends('template.nav-footer')
 
 @section('isi')
-    <h1>ini Home</h1>
+    <h1>ini User</h1>
 @endsection
