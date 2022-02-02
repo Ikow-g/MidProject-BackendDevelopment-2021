@@ -5,5 +5,6 @@
     <p>foto</p>
     <p>nama</p>
     <p>alamat</p>
-    
+    <p>nomor hp</p>
+    <p>umur</p>
 @endsection
