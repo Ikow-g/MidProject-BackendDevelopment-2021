@@ -2,4 +2,8 @@
 
 @section('isi')
     <h1>ini User</h1>
+    <p>foto</p>
+    <p>nama</p>
+    <p>alamat</p>
+    
 @endsection
