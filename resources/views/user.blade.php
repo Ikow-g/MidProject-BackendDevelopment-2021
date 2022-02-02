@@ -7,4 +7,5 @@
     <p>alamat</p>
     <p>nomor hp</p>
     <p>umur</p>
+    <p>tanggal lahir</p>
 @endsection
