@@ -14,7 +14,7 @@
 @include('template.nav')
 
 {{-- content --}}
-<div class="container">
+<div class="container mb-5">
     @yield('isi')
 </div>
 
