@@ -1,8 +1,10 @@
 <?php
 
+use App\Models\course;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\CourseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,11 +29,24 @@ Route::get('/home', function () {
     ]);
 });
 
-Route::get('/course', function () {
-    return view('course',[
-        "title" => "Course"
+
+
+Route::get('/courses', function () {
+    $courses = 
+[
+    
+];
+    return view('courses',[
+        "title" => "Courses",
+        "slug" => "tes",
+        "courses" => course::all()
     ]);
 });
+
+// // single course
+// Route::get('courses/{id}', function($id){
+//     return view('item');
+// });
 
 Route::get('/about', function () {
     return view('about',[
@@ -46,5 +61,7 @@ Route::get('/user', function () {
 });
 
 Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'authenticate']);
 
 Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);

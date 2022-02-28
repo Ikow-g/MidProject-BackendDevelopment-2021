@@ -11,7 +11,7 @@
                     <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ ($title === "Course") ? 'active' : '' }}" href="/course">Course</a>
+                    <a class="nav-link {{ ($title === "Courses") ? 'active' : '' }}" href="/courses">Courses</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ ($title === "About") ? 'active' : '' }}" href="/about">About</a>
@@ -22,11 +22,8 @@
             </ul>
             
             <div class="container d-flex justify-content-end">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
                         <a class="nav-link text-light" href="/login">Login</a>
-                    </li>
-                </ul>
+                    
             </div>
         </div>
     </div>

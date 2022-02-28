@@ -22,4 +22,5 @@
 @include('template.footer')
 
 </body>
+
 </html>

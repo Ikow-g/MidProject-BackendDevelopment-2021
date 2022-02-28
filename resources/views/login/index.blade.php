@@ -1,18 +1,19 @@
 @extends('template.main')
 
 @section('isi')
-<div class="container">
+<div class="container w-100">
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
         <div class="card border-0 bg-secondary text-light shadow rounded-3 my-5">
           <div class="card-body p-4 p-sm-5">
             <h5 class="card-title text-center mb-5 fw-light fs-5">Login</h5>
-            <form>
+            <form action="/login" method="post">
+              @csrf
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="text" class="form-control" id="username" placeholder="Username" required autofocus>
               </div>
               <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
               </div>
 
               <div class="d-grid">
