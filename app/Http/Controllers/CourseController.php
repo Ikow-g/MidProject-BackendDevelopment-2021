@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\course;
+use App\Models\Course;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -14,9 +14,10 @@ class CourseController extends Controller
      */
     public function index()
     {
-        return view('courses', [
+        return view('courses',[
             "title" => "Courses",
-            "courses" => course::all()
+            "slug" => "tes",
+            "courses" => Course::all()
         ]);
     }
 
@@ -44,14 +45,14 @@ class CourseController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\course  $course
+     * @param  \App\Models\Course  $course
      * @return \Illuminate\Http\Response
      */
     public function show($slug)
     {
-        return view('course', [
-            "title" => "Course",
-            "course" => course::find($id)
+        return view('course',[
+            "title" => "single course",
+            "course" => Course::find($slug)
         ]);
     }
 

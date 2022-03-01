@@ -7,8 +7,11 @@
 
     @foreach ($courses as $course)
     <article class="mb-5">
-        <h2><a href="/course/{{ $course["id"] }}">{{ $course["title"] }}</a></h2>
-        <h5>{{ $course["excerpt"] }}</h5>
+        <h2>
+            <a href="/course/{{ $course->id }}">{{ $course->title }}</a>
+        </h2>
+        <h5>{{ $course->author }}</h5>
+        <p>{{ $course->excerpt }}</p>
     </article>
     @endforeach
 </div>

@@ -1,10 +1,10 @@
 <?php
 
-use App\Models\course;
+use App\Models\Course;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,24 +29,10 @@ Route::get('/home', function () {
     ]);
 });
 
+Route::get('/courses', [CourseController::class, 'index']);
+// single course
+Route::get('course/{slug}', [CourseController::class, 'show']);
 
-
-Route::get('/courses', function () {
-    $courses = 
-[
-    
-];
-    return view('courses',[
-        "title" => "Courses",
-        "slug" => "tes",
-        "courses" => course::all()
-    ]);
-});
-
-// // single course
-// Route::get('courses/{id}', function($id){
-//     return view('item');
-// });
 
 Route::get('/about', function () {
     return view('about',[

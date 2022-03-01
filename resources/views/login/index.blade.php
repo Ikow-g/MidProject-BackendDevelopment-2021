@@ -4,6 +4,21 @@
 <div class="container w-100">
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+
+        @if(session()->has('success'))
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        @endif
+
+        @if(session()->has('failed'))
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{ session('failed') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        @endif
+
         <div class="card border-0 bg-secondary text-light shadow rounded-3 my-5">
           <div class="card-body p-4 p-sm-5">
             <h5 class="card-title text-center mb-5 fw-light fs-5">Login</h5>
